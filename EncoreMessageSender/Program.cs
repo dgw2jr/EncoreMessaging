@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Diagnostics;
 using System.Reflection;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Autofac;
 using EncoreMessages;
 using NServiceBus;
-using NServiceBus.Container;
-using NServiceBus.Settings;
 
 namespace EncoreMessageSender
 {
@@ -33,7 +29,7 @@ namespace EncoreMessageSender
 
         private static IEndpointInstance ConfigureEndpoint(IContainer container)
         {
-            var endpointConfiguration = new EndpointConfiguration($"EncoreMessageSender{Guid.NewGuid()}");
+            var endpointConfiguration = new EndpointConfiguration($"EncoreMessageSender-{Environment.UserName}_{Environment.MachineName}");
 
             var transport = endpointConfiguration.UseTransport<MsmqTransport>();
             var routing = transport.Routing();

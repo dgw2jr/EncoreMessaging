@@ -41,10 +41,15 @@ namespace EncoreMessageSender
         {
             if (e.KeyCode != Keys.Enter) return;
 
-            var message = new SendChatMessageCommand { MessageText = messageTextBox.Text, SenderName = nameTextBox.Text };
+            var message = new SendChatMessageCommand { MessageText = messageTextBox.Text, SenderName = GetUserName() };
             _session.Send(message);
 
             messageTextBox.ResetText();
+        }
+
+        private string GetUserName()
+        {
+            return string.IsNullOrWhiteSpace(nameTextBox.Text) ? Environment.UserName : nameTextBox.Text;
         }
     }
 }
