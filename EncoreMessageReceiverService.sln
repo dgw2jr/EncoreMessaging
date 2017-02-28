@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncoreMessageReceiverService", "EncoreMessageReceiverService\EncoreMessageReceiverService.csproj", "{B168CD43-8F3A-418A-B93A-3C7916E9ACC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncoreMessageHandlers", "EncoreMessageHandlers\EncoreMessageHandlers.csproj", "{78FFD4CC-4221-4C40-A521-F92D558CCC65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncoreMessages", "EncoreMessages\EncoreMessages.csproj", "{5D20F9D9-2EDE-4DFE-A519-D0EE2429C534}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncoreMessageSender", "EncoreMessageSender\EncoreMessageSender.csproj", "{CEB061C4-0E68-4994-B236-D2D1A8D4EA42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B168CD43-8F3A-418A-B93A-3C7916E9ACC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B168CD43-8F3A-418A-B93A-3C7916E9ACC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B168CD43-8F3A-418A-B93A-3C7916E9ACC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B168CD43-8F3A-418A-B93A-3C7916E9ACC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78FFD4CC-4221-4C40-A521-F92D558CCC65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78FFD4CC-4221-4C40-A521-F92D558CCC65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78FFD4CC-4221-4C40-A521-F92D558CCC65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78FFD4CC-4221-4C40-A521-F92D558CCC65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D20F9D9-2EDE-4DFE-A519-D0EE2429C534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D20F9D9-2EDE-4DFE-A519-D0EE2429C534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D20F9D9-2EDE-4DFE-A519-D0EE2429C534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D20F9D9-2EDE-4DFE-A519-D0EE2429C534}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEB061C4-0E68-4994-B236-D2D1A8D4EA42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB061C4-0E68-4994-B236-D2D1A8D4EA42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB061C4-0E68-4994-B236-D2D1A8D4EA42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB061C4-0E68-4994-B236-D2D1A8D4EA42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
