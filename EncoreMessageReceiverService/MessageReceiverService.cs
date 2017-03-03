@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Configuration;
+using System.Linq;
+using System.Reflection;
 using System.ServiceProcess;
+using System.Web.Compilation;
 using Autofac;
-using DataAccess;
+using DependencyResolution;
 using NServiceBus;
 
 namespace EncoreMessageReceiverService
@@ -58,8 +61,7 @@ namespace EncoreMessageReceiverService
             endpointConfiguration.EnableInstallers();
 
             var builder = new ContainerBuilder();
-            builder.RegisterType<DomainModel>().AsSelf().AsImplementedInterfaces();
-            builder.RegisterGeneric(typeof(GenericRepository<>)).AsImplementedInterfaces();
+            builder.RegisterAssemblyModules(typeof(RepositoryModule).Assembly);
             var container = builder.Build();
 
             endpointConfiguration.UseContainer<AutofacBuilder>(c => c.ExistingLifetimeScope(container));

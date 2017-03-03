@@ -227,10 +227,6 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domain.Interfaces\Domain.Interfaces.csproj">
-      <Project>{EB3CC37E-A910-4A3D-9DE4-692F10F49E57}</Project>
-      <Name>Domain.Interfaces</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DomainEntities\Domain.Entities.csproj">
       <Project>{38A8736B-3082-46C4-A3D6-38883137702E}</Project>
       <Name>Domain.Entities</Name>

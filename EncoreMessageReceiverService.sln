@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Interfaces", "Domain.Interfaces\Domain.Interfaces.csproj", "{EB3CC37E-A910-4A3D-9DE4-692F10F49E57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyResolution", "DependencyResolution\DependencyResolution.csproj", "{7B8CEAF9-E4C5-4935-85E2-AB3E1969AE21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{EB3CC37E-A910-4A3D-9DE4-692F10F49E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB3CC37E-A910-4A3D-9DE4-692F10F49E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB3CC37E-A910-4A3D-9DE4-692F10F49E57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B8CEAF9-E4C5-4935-85E2-AB3E1969AE21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B8CEAF9-E4C5-4935-85E2-AB3E1969AE21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B8CEAF9-E4C5-4935-85E2-AB3E1969AE21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B8CEAF9-E4C5-4935-85E2-AB3E1969AE21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,5 +84,6 @@ Global
 		{38A8736B-3082-46C4-A3D6-38883137702E} = {20F4A0A5-E650-4C50-A407-3AD238195D20}
 		{FA5C652D-C163-477D-B027-90AC691B14A3} = {1B56EC7D-A2E2-4482-B855-255181CAE06F}
 		{EB3CC37E-A910-4A3D-9DE4-692F10F49E57} = {20F4A0A5-E650-4C50-A407-3AD238195D20}
+		{7B8CEAF9-E4C5-4935-85E2-AB3E1969AE21} = {1B56EC7D-A2E2-4482-B855-255181CAE06F}
 	EndGlobalSection
 EndGlobal
