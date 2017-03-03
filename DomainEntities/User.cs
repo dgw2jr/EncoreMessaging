@@ -1,7 +1,12 @@
-namespace EncoreMessages
+namespace DomainEntities
 {
     public class User
     {
+        public User()
+        {
+
+        }
+
         public User(int id, string name)
         {
             Id = id;

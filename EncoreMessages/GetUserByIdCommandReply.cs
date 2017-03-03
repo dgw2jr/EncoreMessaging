@@ -1,3 +1,4 @@
+using DomainEntities;
 using NServiceBus;
 
 namespace EncoreMessages

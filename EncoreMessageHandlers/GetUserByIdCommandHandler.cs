@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Domain.Interfaces;
+using DomainEntities;
 using EncoreMessages;
 using NServiceBus;
 using NServiceBus.Logging;
@@ -9,12 +9,12 @@ namespace EncoreMessageHandlers
 {
     public class GetUserByIdCommandHandler : IHandleMessages<GetUserByIdCommand>
     {
-        private List<User> Users = new List<User>
+        private readonly IGenericRepository<User> _repository;
+
+        public GetUserByIdCommandHandler(IGenericRepository<User> repository)
         {
-            new User(1, "Don"),
-            new User(2, "Dave"),
-            new User(3, "Vern")
-        };
+            _repository = repository;
+        }
 
         private static ILog logger = LogManager.GetLogger<GetUserByIdCommandHandler>();
 
@@ -22,7 +22,7 @@ namespace EncoreMessageHandlers
         {
             logger.Info($"Searching for user with ID of {message.ID}");
 
-            return context.Reply(new GetUserByIdCommandReply { User = Users.FirstOrDefault(u => u.Id == message.ID) });
+            return context.Reply(new GetUserByIdCommandReply { User = _repository.FirstOrDefault(u => u.Id == message.ID) });
         }
     }
 }

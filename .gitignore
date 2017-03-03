@@ -242,3 +242,6 @@ ModelManifest.xml
 .fake/
 
 *.log
+/MVCMessagingTest/App_Data
+*.dll
+/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml

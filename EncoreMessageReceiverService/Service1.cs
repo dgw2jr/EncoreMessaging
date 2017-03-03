@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ServiceProcess;
+using Autofac;
+using DataAccess;
 using NServiceBus;
 
 namespace EncoreMessageReceiverService
@@ -53,6 +55,13 @@ namespace EncoreMessageReceiverService
             endpointConfiguration.UsePersistence<InMemoryPersistence>();
             endpointConfiguration.SendFailedMessagesTo("error");
             endpointConfiguration.EnableInstallers();
+
+            var builder = new ContainerBuilder();
+            builder.RegisterType<DomainModel>().AsSelf().AsImplementedInterfaces();
+            builder.RegisterGeneric(typeof(GenericRepository<>)).AsImplementedInterfaces();
+            var container = builder.Build();
+
+            endpointConfiguration.UseContainer<AutofacBuilder>(c => c.ExistingLifetimeScope(container));
 
             var endpointInstance = Endpoint.Start(endpointConfiguration).ConfigureAwait(false);
             return endpointInstance.GetAwaiter().GetResult();
