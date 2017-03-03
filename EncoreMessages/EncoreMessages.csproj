@@ -46,8 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChatMessageSentEvent.cs" />
+    <Compile Include="GetUserByIdCommand.cs" />
+    <Compile Include="GetUserByIdCommandReply.cs" />
     <Compile Include="SendChatMessageCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

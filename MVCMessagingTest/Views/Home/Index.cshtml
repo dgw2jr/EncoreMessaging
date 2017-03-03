@@ -1,0 +1,25 @@
+﻿@model MVCMessagingTest.ViewModels.GetUserByIdViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm("Index", null, null, FormMethod.Post, new { @class = "" }))
+{
+    <div class="form-group">
+        @Html.Label("Search for User by ID (int): ")
+        @Html.TextBoxFor(m => m.GetUserByIdCommand.ID, new { @class = "form-control" })
+    </div>
+
+<input type="submit" value="Search!" class="btn btn-default"/>
+}
+<hr/>
+@if (!string.IsNullOrWhiteSpace(Model.Result))
+{
+    <h2>
+        Search Results
+    </h2>
+
+    <div>
+        @Model.Result
+    </div>
+}

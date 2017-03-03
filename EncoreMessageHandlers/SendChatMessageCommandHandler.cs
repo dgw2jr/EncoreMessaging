@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using EncoreMessages;
 using NServiceBus;
 using NServiceBus.Logging;
@@ -13,7 +14,9 @@ namespace EncoreMessageHandlers
         {
             logger.Info($"{message.SenderName}: {message.MessageText}");
 
-            return context.Publish(new ChatMessageSentEvent { SenderName = message.SenderName, MessageText = message.MessageText });
+            //context.Publish(new ChatMessageSentEvent { SenderName = message.SenderName, MessageText = message.MessageText });
+
+            return context.Reply(new SendChatMessageReply { MessageText = "Message was received!", ReplyTime = DateTime.Now });
         }
     }
 }
