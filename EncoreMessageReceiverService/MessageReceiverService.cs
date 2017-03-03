@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.ServiceProcess;
 using Autofac;
 using DataAccess;
@@ -47,7 +48,7 @@ namespace EncoreMessageReceiverService
 
         private static IEndpointInstance StartEndpoint()
         {
-            var endpointConfiguration = new EndpointConfiguration("EncoreMessageReceiver");
+            var endpointConfiguration = new EndpointConfiguration(ConfigurationManager.AppSettings["endpointName"]);
 
             var transport = endpointConfiguration.UseTransport<MsmqTransport>();
 

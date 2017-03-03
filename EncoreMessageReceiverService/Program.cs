@@ -12,14 +12,14 @@ namespace EncoreMessageReceiverService
         {
             if (Environment.UserInteractive)
             {
-                var service1 = new Service1();
-                service1.TestStartupAndStop(args);
+                var service = new MessageReceiverService();
+                service.TestStartupAndStop(args);
             }
             else
             {
                 var ServicesToRun = new ServiceBase[]
                 {
-                    new Service1()
+                    new MessageReceiverService(),
                 };
                 ServiceBase.Run(ServicesToRun);
             }
