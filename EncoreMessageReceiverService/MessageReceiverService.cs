@@ -6,9 +6,9 @@ using NServiceBus;
 
 namespace EncoreMessageReceiverService
 {
-    public partial class Service1 : ServiceBase
+    public partial class MessageReceiverService : ServiceBase
     {
-        public Service1()
+        public MessageReceiverService()
         {
             InitializeComponent();
 

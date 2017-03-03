@@ -1,6 +1,6 @@
 ﻿namespace EncoreMessageReceiverService
 {
-    partial class Service1
+    partial class MessageReceiverService
     {
         /// <summary> 
         /// Required designer variable.
